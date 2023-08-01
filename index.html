@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Programação</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <header>
+        <h3 id="UsuarioOutPut"></h3>
+    </header>
+</body>
+
+</html>
+
+<script>
+    const array = [];
+    const tamanho = 30;
+    for(let i = 0;i <= tamanho ; ++i){
+        if(i  % 2 != 0){
+        array.push(i);
+        }
+    }
+    console.log(array);
+
+ 
+
+   var  palavras = ['arara', 'amor', 'asa', 'longo', 'ele', 'dinossauro', 'esse', 'peppa', 'mamam','tartaruga','bandolin','matam','desodorante','mundo','metem','terra','água','mirim','fogo','sopapos'];
+   var direita = '';
+   var esquerda = '';
+
+   //palavra é tanto o index,valor.
+   let palavrasFiltradas = palavras.filter((palavra) => {
+    return palavra.split("").reverse().join("") === palavra;
+});
+console.log(palavrasFiltradas)
+    
+
+//Fibonnacci
+ const  num = 100;
+ var n1 = 0; var n2 = 1; var ProximoTermo;
+
+ for(let i = 1;i <= num; i++){
+    console.log(n1);
+    ProximoTermo = n1 + n2;
+    n1 = n2;
+    n2 = ProximoTermo;
+
+ };
+
+ numeros = [1,2,3,4,5,6,7,8,9,10];
+ var Alterar = numeros.unshift(0);
+ var Alterar = numeros.push(11);
+ var Alterar = numeros.splice(5,1)//posição, quantidade.
+ var Alterar = numeros.splice(7,1,20,21,22);//posição , quantidade, novos numeros a ser adicionado.
+ console.log(numeros);
+ //Nesse ponto seu Array deve estar dessa forma: 0, 1, 2, 3, 4, 6, 7, 20, 21, 22, 9, 10, 11.
+ 
+    Usuario = [
+    {id: 1, nome: 'Liz', idade: 2},
+	{id: 2, nome: 'Thaís', idade: 32},
+	{id: 3, nome: 'Jonathan', idade: 30},
+	{id: 4, nome: 'Thainá', idade: 29},
+	{id: 5, nome: 'Fabiano', idade: 45}
+  ];
+
+
+ Pessoa = Usuario.map(
+    dados =>({
+     nome: dados.nome,
+     idade: dados.idade}));
+ console.log(Pessoa);
+
+  const UsuarioOutPut= document.getElementById('UsuarioOutPut');
+  const ValueUsuario = Usuario.map(usuarios => `${usuarios.id} - ${usuarios.nome} - ${usuarios.idade}  `);
+ UsuarioOutPut.innerHTML = ValueUsuario
+  console.log(ValueUsuario);
+  
+  const ListaObjetos = {
+    jason: "Jason",
+	thais: "Thaís",
+	liz: "Liz",
+	jennei: "Jennei",
+	jenyffer: "jennyfer",
+	joao: "João",
+	bola: "Bola",
+	gato: "Gato",
+	jaguar: "Jaguar"
+  }
+  for(const propriedade in ListaObjetos){
+    if(propriedade.startsWith('j')){
+        delete ListaObjetos[propriedade];
+    }
+  }
+  console.log(ListaObjetos)
+
+</script>
